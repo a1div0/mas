@@ -1,90 +1,208 @@
 * {
-    font-family: arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a.button {
     display: inline-block;
-    margin: 0 5px;
+    margin: 4px 5px;
     padding: 0 16px;
     height: 36px;
     line-height: 36px;
-    color: #444444;
+    vertical-align: middle;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 18px;
     text-decoration: none;
     text-align: center;
+    transition: 0.3s;
 }
 
 a.button.button__style_outline {
-    border: 2px solid #57cde3;
-    border-radius: 3px;
+    color: #3c82bd;
+    border-color: #3c82bd;
 }
 
 a.button.button__style_outline:hover {
-    transition: 0.3s;
-    background-color: #bef2ff;
+    background-color: #3c82bd11;
 }
 
 a.button.button__style_outline:active {
-    background-color: #57cde3;
-    transition: 0.3s;
+    background-color: #3c82bd22;
 }
 
 a.button.button__style_outline-disabled {
-    border: 2px solid #cecece;
-    border-radius: 3px;
     color: #cecece;
+    border-color: #cecece;
     cursor: none;
     pointer-events: none;
 }
 
 a.button.button__style_flat {
-    border: 2px solid white;
-    border-radius: 3px;
+    color: #3c82bd;
     font-weight: bold;
 }
 
 a.button.button__style_flat:hover {
-    transition: 0.3s;
-    background-color: #bef2ff;
-    border: 2px solid #bef2ff;
+    background-color: #3c82bd22;
 }
 
 a.button.button__style_flat:active {
-    background-color: #57cde3;
-    border: 2px solid #57cde3;
-    transition: 0.3s;
+    background-color: #3c82bd44;
 }
 
 a.button.button__style_flat-disabled {
-    border: 0px;
     font-weight: bold;
     color: #cecece;
     cursor: none;
     pointer-events: none;
 }
 
-a.button.button__style_filled {
-    border: 0;
-    border-radius: 3px;
-    border: 2px solid #57cde3;
-    background-color: #57cde3;
-}
-
-a.button.button__style_filled:hover {
-    transition: 0.3s;
-    background-color: #79d7e9;
-    border: 2px solid #79d7e9;
+a.button.button__style_filled, a.button.button__style_filled-blue {
+    background-color: #3c82bd;
     box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
-a.button.button__style_filled:active {
-    background-color: #57cde3;
-    transition: 0.3s;
+a.button.button__style_filled:hover, a.button.button__style_filled-blue:hover {
+    background-color: #3c82bdcc;
 }
 
-a.button.button__style_filled-disabled {
+a.button.button__style_filled:active, a.button.button__style_filled-blue:active {
+    background-color: #3c82bd;
+    box-shadow: none;
+}
+
+a.button.button__style_filled-orange {
+    background-color: #efa414;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.button.button__style_filled-orange:hover {
+    background-color: #efa414cc;
+}
+
+a.button.button__style_filled-orange:active {
+    background-color: #efa414;
+    box-shadow: none;
+}
+
+a.button.button__style_filled-green {
+    background-color: #23b12a;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.button.button__style_filled-green:hover {
+    background-color: #23b12acc;
+}
+
+a.button.button__style_filled-green:active {
+    background-color: #23b12a;
+    box-shadow: none;
+}
+
+a.button.button__style_classic {
+    color: #444444;
+    background-color: #dcdcdc;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.button.button__style_classic:hover {
+    background-color: #dcdcdccc;
+}
+
+a.button.button__style_classic:active {
+    background-color: #dcdcdc;
+    box-shadow: none;
+}
+
+a.button.button__style_filled-disabled,a.button.button__style_filled-blue-disabled,a.button.button__style_filled-orange-disabled,a.button.button__style_filled-green-disabled,a.button.button__style_classic-disabled {
     color: #a3a3a3;
-    border: 2px solid #dcdcdc;
+    border-color: #dcdcdc;
     background-color: #dcdcdc;
     cursor: none;
     pointer-events: none;
+}
+
+label.checkbox {
+    display: inline-block;
+    margin: 4px 5px;
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #444444;
+    cursor: pointer;
+}
+
+.checkbox div.checkbox_v {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #C8CCD4;
+    border-radius: 3px;
+    float: right;
+    margin: 6px 0;
+    font-size: 0;
+}
+
+label.checkbox:hover svg path {
+    stroke-dashoffset: 0;
+}
+
+input:checked + .checkbox_v {
+    border-color: #3c82bd;
+}
+
+input:checked + .checkbox_v svg path {
+  fill: #3c82bd;
+}
+
+input:checked + .checkbox_v svg polyline {
+  stroke-dashoffset: 0;
+}
+
+.checkbox:hover input:checked + .checkbox_v svg path {
+    fill: #3c82bd00;
+}
+
+.checkbox:hover input:checked + .checkbox_v svg polyline {
+    stroke: #3c82bdff;
+}
+
+input.checkbox_input {
+
+}
+
+.checkbox_v svg {
+    position: relative;
+    left: -2px;
+    top: -2px;
+}
+
+.checkbox_v svg path {
+  fill: none;
+  stroke: #3c82bd;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 84px;
+  stroke-dashoffset: 84px;
+  transition: all 0.6s ease;
+}
+
+.checkbox_v svg polyline {
+  fill: none;
+  stroke: #FFF;
+  stroke-width: 3;
+  stroke-dasharray: 25px;
+  stroke-dashoffset: 25px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: all 0.3s ease;
+}
+label.checkbox > span {
+  pointer-events: none;
+  vertical-align: middle;
 }

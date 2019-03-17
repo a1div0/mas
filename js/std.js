@@ -17,22 +17,55 @@ function plan_go(Plan) {
 function createElement(description) {
     if (description.type == 'button') {
         return createButton(description);
+    } else if (description.type == 'checkbox') {
+        return createCheckbox(description);
     }
 }
 
+function getClassName(description, element_name) {
+    var name = description.type + (element_name ? '__' + element_name : '');
+    var className = name + ' ' + name + '__style_'
+        + (description.style ? description.style : 'classic')
+        + (description.disabled ? '-disabled' : '')
+        ;
+    return className;
+}
+
 function createButton(description) {
-    var elem = document.createElement('a');
+    var block = document.createElement('a');
+    block.className = getClassName(description);
+    block.innerHTML = description.name;
+    block.href = '#';
+    return block;
+}
 
-    if (!elem.style)
-        elem.style = 'filled';
+function createCheckbox(description) {
 
-    elem.className = 'button button__style_' + description.style;
-    if (description.disabled) {
-        elem.className = elem.className + '-disabled';
-    }
-    elem.innerHTML = description.name;
-    elem.href = '#';
-    return elem;
+    var elem0 = document.createElement('span');
+    elem0.innerHTML = description.name;
+
+    var elem1 = document.createElement('input');
+    //elem1.id = 'id1';
+    elem1.type = 'checkbox';
+    elem1.className = getClassName(description, 'input');
+    elem1.checked = !!description.checked;
+    elem1.disabled = !!description.disabled;
+
+    var elem2 = document.createElement('div');
+    elem2.className = 'checkbox_v';
+    elem2.innerHTML = `<svg width="24px" height="24px" viewBox="0 0 24 24">
+            <path d="M 3 0 L 19 0 C 20.65685424949238 1.0145306266472667e-16 22 1.3431457505076199 22 3 L 22 19 C 22 20.65685424949238 20.65685424949238 22 19 22 L 3 22 C 1.3431457505076203 22 2.0290612532945335e-16 20.65685424949238 0 19 L 0 3 C -2.0290612532945335e-16 1.3431457505076203 1.3431457505076199 3.0435918799418e-16 3 0 Z" stroke-width="2" stroke="#000000" fill="none" selected="true" transform="matrix(1 0 0 1 0.960788 1.03335)"></path>
+            <polyline points="4 10 10 18 20 6"></polyline>
+        </svg>`;
+
+    var block = document.createElement('label');
+    block.className = getClassName(description);
+
+    block.appendChild(elem0);
+    block.appendChild(elem1);
+    block.appendChild(elem2);
+
+    return block;
 }
 
 function web_get(url, onrecieve)
