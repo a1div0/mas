@@ -139,6 +139,8 @@ label.checkbox {
 
 label.checkbox.checkbox__style_classic-disabled {
     color: #a3a3a3;
+    cursor: none;
+    pointer-events: none;
 }
 
 .checkbox div.checkbox_v {
@@ -151,7 +153,12 @@ label.checkbox.checkbox__style_classic-disabled {
     font-size: 0;
 }
 
-label.checkbox:hover svg path {
+.checkbox.checkbox__style_classic-disabled div.checkbox_v {
+    border-color: #a3a3a3;
+    background-color: #dcdcdc;
+}
+
+label.checkbox.checkbox__style_classic:hover svg path {
     stroke-dashoffset: 0;
 }
 
@@ -159,19 +166,19 @@ input:checked + .checkbox_v {
     border-color: #3c82bd;
 }
 
-input:checked + .checkbox_v svg path {
-  fill: #3c82bd;
+input.checkbox__input__style_classic:checked + .checkbox_v svg path {
+    fill: #3c82bd;
 }
 
 input:checked + .checkbox_v svg polyline {
   stroke-dashoffset: 0;
 }
 
-.checkbox:hover input:checked + .checkbox_v svg path {
+.checkbox.checkbox__style_classic:hover input:checked + .checkbox_v svg path {
     fill: #3c82bd00;
 }
 
-.checkbox:hover input:checked + .checkbox_v svg polyline {
+.checkbox.checkbox__style_classic:hover input:checked + .checkbox_v svg polyline {
     stroke: #3c82bdff;
 }
 
@@ -186,27 +193,32 @@ input.checkbox_input {
 }
 
 .checkbox_v svg path {
-  fill: none;
-  stroke: #3c82bd;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 84px;
-  stroke-dashoffset: 84px;
-  transition: all 0.6s ease;
+    fill: none;
+    stroke: #3c82bd;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 84px;
+    stroke-dashoffset: 84px;
+    transition: all 0.6s ease;
 }
 
 .checkbox_v svg polyline {
-  fill: none;
-  stroke: #FFF;
-  stroke-width: 3;
-  stroke-dasharray: 25px;
-  stroke-dashoffset: 25px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: all 0.3s ease;
+    fill: none;
+    stroke: #FFF;
+    stroke-width: 3;
+    stroke-dasharray: 25px;
+    stroke-dashoffset: 25px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: all 0.3s ease;
 }
+
+.checkbox.checkbox__style_classic-disabled .checkbox_v svg polyline {
+    stroke: #a3a3a3;
+}
+
 label.checkbox > span {
-  pointer-events: none;
-  vertical-align: middle;
+    pointer-events: none;
+    vertical-align: middle;
 }
