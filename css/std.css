@@ -137,6 +137,10 @@ label.checkbox {
     cursor: pointer;
 }
 
+label.checkbox.checkbox__style_classic-disabled {
+    color: #a3a3a3;
+}
+
 .checkbox div.checkbox_v {
     width: 20px;
     height: 20px;
