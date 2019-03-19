@@ -66,7 +66,19 @@ var Plan = {
             {
                 "type":"checkbox",
                 "name":"Использовать камеру как сканнер ШК",
-                "style":"switch"
+                "style":"checkbox-blue"
+            },
+            {
+                "type":"checkbox",
+                "name":"Использовать камеру как сканнер ШК",
+                "style":"checkbox-blue",
+                "disabled": true
+            },
+            {
+                "type":"checkbox",
+                "name":"Использовать камеру как сканнер ШК",
+                "style":"switch",
+                "checked": true
             },
             {
                 "type":"checkbox",
