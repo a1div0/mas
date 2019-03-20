@@ -1,3 +1,29 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* https://tproger.ru/translations/how-css-flexbox-works/ */
+
+.group-horisontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.group-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    display: inline-block;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    display: inline-block;
+}
