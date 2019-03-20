@@ -21,7 +21,7 @@ label.checkbox.checkbox__style_switch-disabled > span {
     vertical-align: middle;
 }
 
-.checkbox__track__style_switch {
+.checkbox__track__style_switch, .checkbox__track__style_switch-disabled {
     background-color: rgba(0,0,0,0.26);
     display: inline-block;
     height: 14px;
@@ -31,7 +31,7 @@ label.checkbox.checkbox__style_switch-disabled > span {
     margin-left: 8px;
 }
 
-.checkbox__thumb__style_switch {
+.checkbox__thumb__style_switch, .checkbox__thumb__style_switch-disabled {
     background-color: #fafafa;
     position: relative;
     left: 0px;
@@ -46,17 +46,30 @@ label.checkbox.checkbox__style_switch-disabled > span {
     transition-property: left;
 }
 
+.checkbox__thumb__style_switch-disabled {
+    background-color: #ccc;
+}
+
 input:checked + .checkbox__track__style_switch {
     background-color: rgba(63,81,181,0.5);
 }
 
-input:checked + .checkbox__track__style_switch .checkbox__thumb__style_switch {
+input:checked + .checkbox__track__style_switch-disabled {
+    background-color: #888;
+}
+
+input:checked + .checkbox__track__style_switch .checkbox__thumb__style_switch,
+input:checked + .checkbox__track__style_switch-disabled .checkbox__thumb__style_switch-disabled {
     background-color: #3f51b5;
     left: 16px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);
 }
 
-.checkbox__input__style_switch {
+input:checked + .checkbox__track__style_switch-disabled .checkbox__thumb__style_switch-disabled {
+    background-color: #ccc;
+}
+
+.checkbox__input__style_switch, .checkbox__input__style_switch-disabled {
     position: absolute;
     z-index: -1;
     opacity: 0;

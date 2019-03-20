@@ -51,14 +51,27 @@ var Plan = {
                 "style":"classic"
             },
             {
+                "type":"group",
+                "style":"2col",
+                "elements": {
+                    
+                }
+            },
+            {
                 "type":"checkbox",
                 "name":"Использовать подсветку",
+                "style":"classic",
+                "checked": false
+            },
+            {
+                "type":"checkbox",
+                "name":"",
                 "style":"classic",
                 "checked": true
             },
             {
                 "type":"checkbox",
-                "name":"Использовать подсветку",
+                "name":"",
                 "style":"classic",
                 "checked": true,
                 "disabled": true
@@ -66,24 +79,39 @@ var Plan = {
             {
                 "type":"checkbox",
                 "name":"Использовать камеру как сканнер ШК",
-                "style":"checkbox-blue"
+                "style":"checkbox-blue",
+                "checked": false
             },
             {
                 "type":"checkbox",
-                "name":"Использовать камеру как сканнер ШК",
+                "name":"",
                 "style":"checkbox-blue",
+                "checked": true
+            },
+            {
+                "type":"checkbox",
+                "name":"",
+                "style":"checkbox-blue",
+                "checked": true,
                 "disabled": true
             },
             {
                 "type":"checkbox",
                 "name":"Использовать камеру как сканнер ШК",
                 "style":"switch",
+                "checked": false
+            },
+            {
+                "type":"checkbox",
+                "name":"",
+                "style":"switch",
                 "checked": true
             },
             {
                 "type":"checkbox",
-                "name":"Использовать камеру как сканнер ШК",
+                "name":"",
                 "style":"switch",
+                "checked": true,
                 "disabled": true
             }
         ]

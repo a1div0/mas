@@ -8,7 +8,9 @@ function plan_go(Plan) {
     for (var i = 0; i < Plan.main.elements.length; i++) {
         var description = Plan.main.elements[i];
         var elem = createElement(description);
-        div_form.appendChild(elem);
+        if (elem != null) {
+            div_form.appendChild(elem);
+        }
     }
 
     document.body.appendChild(div_form);
@@ -19,6 +21,8 @@ function createElement(description) {
         return createButton(description);
     } else if (description.type == 'checkbox') {
         return createCheckbox(description);
+    } else if (description.type == 'group') {
+        return createGroup(description);
     }
 }
 
@@ -79,4 +83,12 @@ function createCheckbox(description) {
     }
 
     return block;
+}
+
+function createGroup(description) {
+    // var block = document.createElement('a');
+    // block.className = getClassName(description);
+    // block.innerHTML = description.name;
+    // block.href = '#';
+    return null;
 }
