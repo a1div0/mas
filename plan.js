@@ -54,7 +54,7 @@ var Plan = {
                 "type":"group",
                 "style":"2col",
                 "elements": {
-                    
+
                 }
             },
             {

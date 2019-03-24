@@ -1,5 +1,3 @@
-'use strict';
-
 function plan_go(Plan) {
 
     var div_form = document.createElement('div');

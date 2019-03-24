@@ -1,0 +1,37 @@
+a.button {
+    display: inline-block;
+    margin: 4px 5px;
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+a.button.button__outline {
+    color: #3c82bd;
+    border-color: #3c82bd;
+}
+
+a.button.button__outline:hover {
+    background-color: #3c82bd11;
+}
+
+a.button.button__outline:active {
+    background-color: #3c82bd22;
+}
+
+a.button.button__outline-disabled {
+    color: #cecece;
+    border-color: #cecece;
+    cursor: none;
+    pointer-events: none;
+}
+

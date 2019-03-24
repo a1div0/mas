@@ -1,0 +1,19 @@
+a.button.button__outline {
+    color: #3c82bd;
+    border-color: #3c82bd;
+}
+
+a.button.button__outline:hover {
+    background-color: #3c82bd11;
+}
+
+a.button.button__outline:active {
+    background-color: #3c82bd22;
+}
+
+a.button.button__outline-disabled {
+    color: #cecece;
+    border-color: #cecece;
+    cursor: none;
+    pointer-events: none;
+}
