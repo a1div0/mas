@@ -5,15 +5,36 @@
     <meta http-equiv="content-language" content="ru" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/std.css" />
-    <link rel="stylesheet" href="css/button.css" />
-    <link rel="stylesheet" href="css/checkbox__style_classic.css" />
-    <link rel="stylesheet" href="css/checkbox__style_checkbox-blue.css" />
-    <link rel="stylesheet" href="css/checkbox__style_switch.css" />
-    <script src="js/std.js"></script>
-    <script src="js/glasunia.js"></script>
+
+    <!-- main -->
+    <link rel="stylesheet" href="packages/main/std.css" />
+    <script src="packages/main/std.js"></script>
+    <script src="packages/main/reviver.js"></script>
+
+    <!-- button (classic) -->
+    <link rel="stylesheet" href="packages/button/button__classic.css" />
+    <script src="packages/button/button.js"></script>
+
+    <!-- button (outline) -->
+    <link rel="stylesheet" href="packages/button/button__outline/button__outline.css" />
+
+    <!-- button (flat) -->
+    <link rel="stylesheet" href="packages/button/button__flat/button__flat.css" />
+
+    <!-- button (filled) -->
+    <link rel="stylesheet" href="packages/button/button__filled/button__filled.css" />
+
+    <!-- checkbox (classic) -->
+    <link rel="stylesheet" href="packages/checkbox/checkbox__classic.css" />
+    <script src="packages/checkbox/checkbox.js"></script>
+
+    <!-- checkbox (checkbox__blue) -->
+    <link rel="stylesheet" href="packages/checkbox/checkbox__check/checkbox__check.css" />
+
+    <!-- checkbox (checkbox__switch) -->
+    <link rel="stylesheet" href="packages/checkbox/checkbox__switch/checkbox__switch.css" />
 </head>
-<body>
+<body><!--
     <div class="group-horisontal">
         <div class="field">
             <label for="n">Имя</label>
@@ -27,11 +48,12 @@
             <label for="a">Место жительства</label>
             <input type="text" id="a" style="width: 128px;" />
         </div>
-    </div>
+    </div>-->
 
-    <script src="plan.js"></script>
+    <script src="form_sketch.js"></script>
     <script>
-    	plan_go(Plan);
+    	revive_form_sketch(FormSketch);
     </script>
+
 </body>
 </html>

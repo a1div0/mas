@@ -1,0 +1,50 @@
+
+a.button.button__filled_blue {
+    background-color: #3c82bd;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.button.button__filled_blue:hover {
+    background-color: #3c82bdcc;
+}
+
+a.button.button__filled_blue:active {
+    background-color: #3c82bd;
+    box-shadow: none;
+}
+
+a.button.button__filled_orange {
+    background-color: #efa414;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.button.button__filled_orange:hover {
+    background-color: #efa414cc;
+}
+
+a.button.button__filled_orange:active {
+    background-color: #efa414;
+    box-shadow: none;
+}
+
+a.button.button__filled_green {
+    background-color: #23b12a;
+    box-shadow: 0 3px 9px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+a.button.button__filled_green:hover {
+    background-color: #23b12acc;
+}
+
+a.button.button__filled_green:active {
+    background-color: #23b12a;
+    box-shadow: none;
+}
+
+a.button.button__filled_disabled,a.button.button__filled_blue-disabled,a.button.button__filled_orange-disabled,a.button.button__filled_green-disabled {
+    color: #a3a3a3;
+    border-color: #dcdcdc;
+    background-color: #dcdcdc;
+    cursor: none;
+    pointer-events: none;
+}

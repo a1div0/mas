@@ -1,0 +1,47 @@
+a.button.button__outline_red {
+    color: #bd3c82;
+    border-color: #bd3c82;
+}
+
+a.button.button__outline_red:hover {
+    background-color: #bd3c8211;
+}
+
+a.button.button__outline_red:active {
+    background-color: #bd3c8222;
+}
+
+a.button.button__outline_blue {
+    color: #3c82bd;
+    border-color: #3c82bd;
+}
+
+a.button.button__outline_blue:hover {
+    background-color: #3c82bd11;
+}
+
+a.button.button__outline_blue:active {
+    background-color: #3c82bd22;
+}
+
+a.button.button__outline_green {
+    color: #3cbd82;
+    border-color: #3cbd82;
+}
+
+a.button.button__outline_green:hover {
+    background-color: #3cbd8211;
+}
+
+a.button.button__outline_green:active {
+    background-color: #3cbd8222;
+}
+
+a.button.button__outline_blue-disabled
+,a.button.button__outline_red-disabled
+,a.button.button__outline_green-disabled {
+    color: #cecece;
+    border-color: #cecece;
+    cursor: none;
+    pointer-events: none;
+}

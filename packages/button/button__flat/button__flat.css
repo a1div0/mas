@@ -1,0 +1,19 @@
+a.button.button__flat_blue {
+    color: #3c82bd;
+    font-weight: bold;
+}
+
+a.button.button__flat_blue:hover {
+    background-color: #3c82bd22;
+}
+
+a.button.button__flat_blue:active {
+    background-color: #3c82bd44;
+}
+
+a.button.button__flat_blue-disabled {
+    font-weight: bold;
+    color: #cecece;
+    cursor: none;
+    pointer-events: none;
+}

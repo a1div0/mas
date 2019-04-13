@@ -1,0 +1,79 @@
+label.checkbox.checkbox__classic, label.checkbox.checkbox__classic-disabled {
+    display: block;
+    margin: 4px 5px;
+    padding: 0 0px;
+    height: 36px;
+    line-height: 36px;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #444444;
+    cursor: pointer;
+    width: 300px;
+}
+
+label.checkbox.checkbox__classic-disabled {
+    color: #a3a3a3;
+    cursor: none;
+    pointer-events: none;
+}
+
+label.checkbox.checkbox__classic-disabled > span {
+    pointer-events: none;
+    vertical-align: middle;
+}
+
+.checkbox.checkbox__classic div.checkbox_v, .checkbox.checkbox__classic-disabled div.checkbox_v {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    float: right;
+    margin: 6px 0px 6px 8px;
+    font-size: 0;
+}
+
+.checkbox.checkbox__classic-disabled div.checkbox_v {
+    border-color: #a3a3a3;
+    background-color: #dcdcdc;
+}
+
+input.checkbox__input__classic:checked + .checkbox_v svg polyline {
+  stroke-dashoffset: 0;
+}
+
+input.checkbox__input__classic-disabled:checked + .checkbox_v svg polyline {
+  stroke-dashoffset: 0;
+}
+
+.checkbox.checkbox__classic:hover .checkbox_v {
+    background-color: #00000011;
+}
+
+.checkbox.checkbox__classic input, .checkbox.checkbox__classic-disabled input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox.checkbox__classic .checkbox_v svg, .checkbox.checkbox__classic-disabled .checkbox_v svg {
+    position: relative;
+    left: -2px;
+    top: -2px;
+}
+
+.checkbox.checkbox__classic .checkbox_v svg polyline, .checkbox.checkbox__classic-disabled .checkbox_v svg polyline {
+    fill: none;
+    stroke: #444;
+    stroke-width: 3;
+    stroke-dasharray: 30px;
+    stroke-dashoffset: 30px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: all 0.3s ease;
+}
+
+.checkbox.checkbox__classic-disabled .checkbox_v svg polyline {
+    stroke: #a3a3a3;
+}
