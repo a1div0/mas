@@ -52,7 +52,7 @@ func main() {
 
     compile_path(src_path, &result)
 
-    err = ioutil.WriteFile(dst_path + "\\form-sketch-reviver.css", []byte(result.css), 0)
+    err = ioutil.WriteFile(dst_path + "\\form-sketch-reviver.min.css", []byte(result.css), 0)
 	if err != nil {
         fmt.Println(err.Error())
         return
@@ -65,7 +65,7 @@ func main() {
         js = minimize_js(js);
     }
 
-    err = ioutil.WriteFile(dst_path + "\\form-sketch-reviver.js", []byte(js), 0)
+    err = ioutil.WriteFile(dst_path + "\\form-sketch-reviver.min.js", []byte(js), 0)
 	if err != nil {
         fmt.Println(err.Error())
         return

@@ -5,3 +5,5 @@ function createButton(description) {
     block.href = '#';
     return block;
 }
+
+form_sketch__add_type('button', createButton);

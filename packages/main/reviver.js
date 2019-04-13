@@ -1,27 +1,49 @@
-function revive_form_sketch(Plan) {
+"use strinct";
 
-    var div_form = document.createElement('div');
-    div_form.id = 'form';
+var g_create_functions = {};
 
-    for (var i = 0; i < Plan.main.elements.length; i++) {
-        var description = Plan.main.elements[i];
-        var elem = createElement(description);
-        if (elem != null) {
-            div_form.appendChild(elem);
+function form_sketch__add_type(type_name, on_before_create_function) {
+    g_create_functions[type_name] = on_before_create_function;
+}
+
+function form_sketch__revive(formSketch) {
+
+    let div_form = document.createElement("div");
+    div_form.id = "form";
+
+    try {
+        let elements_cnt = formSketch.main.elements.length;
+
+        for (let i = 0; i < elements_cnt; i++) {
+
+            let description = formSketch.main.elements[i];
+            let f = g_create_functions[description.type];
+            if (f) {
+                let e = f(description);
+                if (e) {
+                    div_form.appendChild(e);
+                }
+            } else {
+                throw "Элемент управления неизвестного типа - %1. Добавьте пакет для работы с ним."
+                    .replace("%1", description.type);
+            }
         }
+    } catch(e) {
+        
+        let err_msg = "ОШИБКА ВЫПОЛНЕНИЯ СЦЕНАРИЯ!\n";
+
+        if (typeof(e) == "string") {
+            err_msg += e;
+        }else{
+            err_msg +=
+                "Название ошибки: "+e.name+"\n"+
+                "Сообщение: "+e.message;
+        }
+
+        alert(err_msg);
     }
 
     document.body.appendChild(div_form);
-}
-
-function createElement(description) {
-    if (description.type == 'button') {
-        return createButton(description);
-    } else if (description.type == 'checkbox') {
-        return createCheckbox(description);
-    } else if (description.type == 'group') {
-        return createGroup(description);
-    }
 }
 
 function getClassName(description, element_name) {
@@ -31,12 +53,4 @@ function getClassName(description, element_name) {
         + (description.disabled ? '-disabled' : '')
         ;
     return className;
-}
-
-function createGroup(description) {
-    // var block = document.createElement('a');
-    // block.className = getClassName(description);
-    // block.innerHTML = description.name;
-    // block.href = '#';
-    return null;
 }
