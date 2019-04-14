@@ -1,9 +1,9 @@
 function createButton(description) {
     var block = document.createElement('a');
-    block.className = getClassName(description);
-    block.innerHTML = description.name;
+    block.className = form_sketch__getClassName(description);
+    block.innerHTML = form_sketch__getLocalStr(description.caption);
     block.href = '#';
     return block;
 }
 
-form_sketch__add_type('button', createButton);
+form_sketch__addType('button', createButton);

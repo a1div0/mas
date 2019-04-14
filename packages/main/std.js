@@ -59,3 +59,15 @@ function web_post_json(url, json_str, onrecieve)
     }
     h.send( json_str );
 }
+
+function form_sketch__getMeta(attrName, attrValue) {
+  const metas = document.getElementsByTagName('meta');
+
+  for (let i = 0; i < metas.length; i++) {
+    if (metas[i].getAttribute(attrName) === attrValue) {
+      return metas[i].getAttribute('content');
+    }
+  }
+
+  return '';
+}

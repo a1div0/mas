@@ -4,13 +4,17 @@ var FormSketch = {
         "elements": [
             {
                 "type":"checkbox",
-                "name":"Использовать что-то",
+                "caption": {
+                    "ru": "Использовать что-то",
+                    "cn": "用法的东西",
+                    "en": "Usage someting"
+                },
                 "style":"switch",
                 "checked": false
             }
             // {
             //     "type":"button",
-            //     "name":"Сохранить",
+            //     "caption":"Сохранить",
             //     "style":"filled_green",
             //     "disabled":false
             // }

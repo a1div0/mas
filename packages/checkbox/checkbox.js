@@ -20,16 +20,16 @@ checkbox__AddStyle('classic', checkbox__style_classic);
 function createCheckbox(description) {
 
     let block = document.createElement('label');
-    block.className = getClassName(description);
+    block.className = form_sketch__getClassName(description);
 
     let elem0 = document.createElement('span');
-    elem0.innerHTML = description.name;
+    elem0.innerHTML = form_sketch__getLocalStr(description.caption);
     block.appendChild(elem0);
 
     let elem1 = document.createElement('input');
     //elem1.id = 'id1';
     elem1.type = 'checkbox';
-    elem1.className = getClassName(description, 'input');
+    elem1.className = form_sketch__getClassName(description, 'input');
     elem1.checked = !!description.checked;
     elem1.disabled = !!description.disabled;
     block.appendChild(elem1);
@@ -44,4 +44,4 @@ function createCheckbox(description) {
     return block;
 }
 
-form_sketch__add_type('checkbox', createCheckbox);
+form_sketch__addType('checkbox', createCheckbox);
