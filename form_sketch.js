@@ -3,15 +3,24 @@ var FormSketch = {
         "prop":{},
         "elements": [
             {
-                "type":"checkbox",
-                "caption": {
-                    "ru": "Использовать что-то",
-                    "cn": "用法的东西",
-                    "en": "Usage someting"
-                },
-                "style":"switch",
-                "checked": false
+                "type":"group",
+                "orientation": "vertical",
+                "elements":[
+                    {
+                        "type":"checkbox",
+                        "caption": "Использовать что-то1",
+                        "style":"switch",
+                        "checked": false
+                    },
+                    {
+                        "type":"checkbox",
+                        "caption": "Использовать что-то2",
+                        "style":"switch",
+                        "checked": false
+                    }
+                ]
             }
+
             // {
             //     "type":"button",
             //     "caption":"Сохранить",

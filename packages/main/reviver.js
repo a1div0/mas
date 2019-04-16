@@ -18,38 +18,59 @@ function form_sketch__revive(formSketch) {
     div_form.id = "form";
 
     try {
-        let elements_cnt = formSketch.main.elements.length;
-
-        for (let i = 0; i < elements_cnt; i++) {
-
-            let description = formSketch.main.elements[i];
-            let f = g_create_functions[description.type];
-            if (f) {
-                let e = f(description);
-                if (e) {
-                    div_form.appendChild(e);
-                }
-            } else {
-                throw "Элемент управления неизвестного типа - %1. Добавьте пакет для работы с ним."
-                    .replace("%1", description.type);
-            }
-        }
+        group_revive(div_form, formSketch.main.elements);
     } catch(e) {
 
-        let err_msg = "ОШИБКА ВЫПОЛНЕНИЯ СЦЕНАРИЯ!\n";
+        let err_msg = form_sketch__getLocalStr({
+            "ru":"ОШИБКА ВЫПОЛНЕНИЯ СЦЕНАРИЯ!",
+            "cn":"执行错误！",
+            "en":"ERROR OF EXECUTION!"
+        }) + "\n";
 
         if (typeof(e) == "string") {
             err_msg += e;
         }else{
             err_msg +=
-                "Название ошибки: "+e.name+"\n"+
-                "Сообщение: "+e.message;
+                form_sketch__getLocalStr({
+                    "ru":"Название ошибки: ",
+                    "cn":"错误名称：",
+                    "en":"Error name: "
+                }) + e.name + "\n" +
+                form_sketch__getLocalStr({
+                    "ru":"Сообщение: ",
+                    "cn":"信息：",
+                    "en":"Message: "
+                }) + e.message;
         }
 
         alert(err_msg);
     }
 
     document.body.appendChild(div_form);
+}
+
+function group_revive(parentDom, elements) {
+
+    let elements_cnt = elements.length;
+
+    for (let i = 0; i < elements_cnt; i++) {
+
+        let description = elements[i];
+        let f = g_create_functions[description.type];
+        if (f) {
+            let e = f(description);
+            if (e) {
+                parentDom.appendChild(e);
+            }
+        } else {
+            throw form_sketch__getLocalStr({
+                "ru":"Элемент управления неизвестного типа - %1. Добавьте пакет для работы с ним.",
+                "cn":"控制未知类型 - ％1. 添加一个包以使用它.",
+                "en":"Control of unknown type -%1. Add a package to work with it."
+            }).replace("%1", description.type);
+        }
+    }
+
 }
 
 function form_sketch__getClassName(description, element_name) {
