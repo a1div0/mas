@@ -38,7 +38,11 @@ function createCheckbox(description) {
     if (f) {
         f(description, block);
     }else{
-        throw 'Checkbox неизвестного стиля - ' + description.style;
+        throw form_sketch__getLocalStr({
+            'ru':'Галочка неизвестного стиля - ',
+            'cn':'未知风格的复选框 - ',
+            'en':'Checkbox of unknown style - '
+        }) + description.style;
     }
 
     return block;

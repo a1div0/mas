@@ -7,8 +7,12 @@ function checkbox__style_switch(description, block) {
 
     let elem2 = document.createElement('div');
     elem2.className = form_sketch__getClassName(description, 'track');
+
+    let elem1 = document.createElement('div');
+
     elem2.appendChild(elem3);
-    block.appendChild(elem2);
+    elem1.appendChild(elem2);
+    block.appendChild(elem1);
 
 }
 

@@ -8,7 +8,6 @@ label.checkbox.checkbox__classic, label.checkbox.checkbox__classic-disabled {
     font-size: 16px;
     color: #444444;
     cursor: pointer;
-    width: 300px;
 }
 
 label.checkbox.checkbox__classic-disabled {
@@ -76,4 +75,13 @@ input.checkbox__input__classic-disabled:checked + .checkbox_v svg polyline {
 
 .checkbox.checkbox__classic-disabled .checkbox_v svg polyline {
     stroke: #a3a3a3;
+}
+
+div.group[data-orientation="vertical"] > label.checkbox {
+    display: table-row;
+}
+
+/* https://tproger.ru/translations/how-css-flexbox-works/ */
+div.group[data-orientation="horizontal"] > label.checkbox {
+    color: green;
 }

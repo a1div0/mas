@@ -16,6 +16,10 @@ label.checkbox.checkbox__switch-disabled {
     pointer-events: none;
 }
 
+label.checkbox > div {
+    display: inline-block;
+}
+
 label.checkbox.checkbox__switch-disabled > span {
     pointer-events: none;
     vertical-align: middle;
@@ -50,22 +54,22 @@ label.checkbox.checkbox__switch-disabled > span {
     background-color: #ccc;
 }
 
-input:checked + .checkbox__track__switch {
+input:checked + div > div.checkbox__track__switch {
     background-color: rgba(63,81,181,0.5);
 }
 
-input:checked + .checkbox__track__switch-disabled {
+input:checked + div > div.checkbox__track__switch-disabled {
     background-color: #888;
 }
 
-input:checked + .checkbox__track__switch .checkbox__thumb__switch,
-input:checked + .checkbox__track__switch-disabled .checkbox__thumb__switch-disabled {
+input:checked + div > div.checkbox__track__switch .checkbox__thumb__switch,
+input:checked + div > div.checkbox__track__switch-disabled .checkbox__thumb__switch-disabled {
     background-color: #3f51b5;
     left: 16px;
     box-shadow: 0 3px 4px 0 rgba(0,0,0,.14), 0 3px 3px -2px rgba(0,0,0,.2), 0 1px 8px 0 rgba(0,0,0,.12);
 }
 
-input:checked + .checkbox__track__switch-disabled .checkbox__thumb__switch-disabled {
+input:checked + div > div.checkbox__track__switch-disabled .checkbox__thumb__switch-disabled {
     background-color: #ccc;
 }
 
@@ -75,4 +79,12 @@ input:checked + .checkbox__track__switch-disabled .checkbox__thumb__switch-disab
     opacity: 0;
     width: 0;
     height: 0;
+}
+
+div.group[data-orientation="vertical"] > label.checkbox > span {
+    display: table-cell;
+}
+
+div.group[data-orientation="vertical"] > label.checkbox > div {
+    display: table-cell;
 }
